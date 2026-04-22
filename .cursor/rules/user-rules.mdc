@@ -1,0 +1,25 @@
+---
+description: User communication and project coding conventions
+alwaysApply: true
+---
+
+# User Rules
+
+## Communication
+
+- Always respond in Traditional Chinese.
+- Keep responses concise and practical.
+- When giving commands, prefer copy-ready command blocks.
+
+## Go Project Conventions
+
+- Use clear and consistent naming for handlers, tests, and files.
+- Keep HTTP handlers simple; move complex logic into helper functions.
+- Add tests for new behavior when practical.
+
+## Docker and CI Conventions
+
+- Keep Docker image builds reproducible and minimal.
+- Ensure CI checks can run with `go test ./...` and `go build ./cmd/api`.
+- Prefer small, focused workflow steps with clear names.
+

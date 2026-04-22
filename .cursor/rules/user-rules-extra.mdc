@@ -1,0 +1,29 @@
+---
+description: Extra rules for Go API and CI workflow changes
+alwaysApply: false
+---
+
+# User Rules Extra
+
+## Change Scope
+
+- Prefer small, focused changes in one PR.
+- Do not refactor unrelated files in the same task.
+- Keep backward compatibility for existing endpoints unless explicitly requested.
+
+## Go API Implementation
+
+- Keep handlers thin; extract validation and business logic into helper functions.
+- Return consistent HTTP status codes and plain, predictable response bodies.
+- Add or update tests when endpoint behavior changes.
+
+## CI and Docker
+
+- When workflow files change, keep job names clear and action steps minimal.
+- Ensure `go test ./...` and `go build ./cmd/api` remain green after changes.
+- Keep Dockerfile layers deterministic and avoid unnecessary packages.
+
+## Safety
+
+- Never commit secrets, tokens, or local environment files.
+- If requirements are ambiguous, ask before changing public API behavior.
